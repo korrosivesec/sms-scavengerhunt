@@ -1,11 +1,6 @@
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+import pygsheets
 
-
-# use creds to create a client to interact with the Google Drive API
-scope = ['https://spreadsheets.google.com/feeds']
-creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
-client = gspread.authorize(creds)
+client = pygsheets.authorize(service_file='client_secret.json')
 
 def lookupKey(player, key):
 # Find a workbook by name and open the first sheet
@@ -15,7 +10,13 @@ def lookupKey(player, key):
 	elif player == 'player2':
 		sheet = client.open("NoteGame_Player2").sheet1
 
-	keyCell = sheet.find(str(key))
-	note = sheet.cell(keyCell.row, 2).value
+	key_cell = sheet.find(str(key))
+	note_cell = key_cell[0].neighbour('right')
+
+	# Format cells to denote notes that have been found.
+	key_cell[0].color = (0.956, 0.258, 0.874, 0.5)
+	note_cell.color = (0.956, 0.258, 0.874, 0.5)
+
+	note = note_cell.value
 
 	return note
