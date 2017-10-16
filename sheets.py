@@ -13,9 +13,9 @@ def lookupKey(player, key):
 	key_cell = sheet.find(str(key))
 	note_cell = key_cell[0].neighbour('right')
 
-	# Format cells to denote notes that have been found.
-	key_cell[0].color = (0.956, 0.258, 0.874, 0.5)
-	note_cell.color = (0.956, 0.258, 0.874, 0.5)
+	# Uncomment the next two lines to format cells to denote notes that have been found.
+	# key_cell[0].color = (0.956, 0.258, 0.874, 0.5)
+	# note_cell.color = (0.956, 0.258, 0.874, 0.5)
 
 	note = note_cell.value
 
