@@ -1,5 +1,7 @@
 import pygsheets
 
+# Make sure you have placed client_secret.json into the project root
+# according to the README instructions.
 client = pygsheets.authorize(service_file='client_secret.json')
 
 def lookupKey(player, key):
