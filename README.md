@@ -1,4 +1,4 @@
-# ${1:Project Name}
+# sms-scavengerhunt
 
 These scripts can be used to setup a SMS based scavenger hunt or to enable basic covert communication between people.  See the usage section below for more details.
 
@@ -12,13 +12,13 @@ The lookup script checks queries the associated clue/note from Google Sheets and
 
 ## Requirements
 
-# Modules
+### Modules
 pygsheets - https://github.com/nithinmurali/pygsheets - Google Sheets API module
 twilio - https://www.twilio.com/docs/libraries/python - Twilio module
 Flask - http://flask.pocoo.org/ - Webhook listener
 *Zappa - https://github.com/Miserlou/Zappa - Not technically required, but will make deployment a lot easier.
 
-# Accounts/Services
+### Accounts/Services
 Twilio SMS - https://www.twilio.com/sms - These are inexpensive and the Twilio API rocks.
 Google Account with Sheets access
 Amazon AWS account
@@ -45,10 +45,10 @@ Each sheet should have two columns with headers "key" and "note".  Populate the 
 
 ## Usage
 
-# Scavenger Hunt Mode
+### Scavenger Hunt Mode
 
 Plan out your hunt and populate the associated Google Sheet with associated clue numbers and notes. Then give the players your configured Twilio number and the starting clue number.  One of the benefits of placing clue numbers instead of notes, is that you can alter clues on the fly should you need to adjust the challenge
 
-# Note Swap Mode
+### Note Swap Mode
 
 Each player will need to create their own Google Sheet and use a predefined range of numbers as their designated range.  Then they add their range of numbers and note messages to the sheet.  Players can place paper notes with the numbers as they see fit and.  Once another player finds a slip, they text the agreed upon SMS number to retreive the note.  This mode is useful when you want to leave notes for someone, without exposing the specific content.  Should someone else happen to come across the note, they will just see the note number with no context regarding what it might represent.
