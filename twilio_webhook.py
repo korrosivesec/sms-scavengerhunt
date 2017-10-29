@@ -13,7 +13,10 @@ def incoming_sms():
     # Start our TwiML response
     resp = MessagingResponse()
 
-    # # # Determine the right reply for this message
+    """
+    Determine the right reply for this SMS.
+    See README for guidance.
+    """
     if 10000 <= key <= 20000:
         note = sheets.lookupKey('player1', key)
     elif 30000 <= key <= 40000:
