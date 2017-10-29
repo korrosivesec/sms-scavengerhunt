@@ -13,15 +13,15 @@ The lookup script checks queries the associated clue/note from Google Sheets and
 ## Requirements
 
 ### Modules
-pygsheets - https://github.com/nithinmurali/pygsheets - Google Sheets API module
-twilio - https://www.twilio.com/docs/libraries/python - Twilio module
-Flask - http://flask.pocoo.org/ - Webhook listener
+*pygsheets - https://github.com/nithinmurali/pygsheets - Google Sheets API module.
+*twilio - https://www.twilio.com/docs/libraries/python - Twilio module.
+*Flask - http://flask.pocoo.org/ - Webhook listener.
 *Zappa - https://github.com/Miserlou/Zappa - Not technically required, but will make deployment a lot easier.
 
 ### Accounts/Services
-Twilio SMS - https://www.twilio.com/sms - These are inexpensive and the Twilio API rocks.
-Google Account with Sheets access
-Amazon AWS account
+*Twilio SMS - https://www.twilio.com/sms - These are inexpensive and the Twilio API rocks.
+*Google Account with Sheets access.
+*Amazon AWS account.
 
 
 ## Installation
@@ -32,15 +32,11 @@ Ensure you have all the required python modules and service accounts configured.
 
 2. Copy the client_secret.json file created in step one to your project root.
 
-4. Create your Google Sheet.  As is, the code is setup for two players.  Only one can be used for scavenger hunt mode or addtional players can be added by modifying the scripts.  Sheets should be created in the format "NoteGame_Player1" and "NoteGame_Player2".
+3. Create your Google Sheet.  As is, the code is setup for two players.  Only one can be used for scavenger hunt mode or addtional players can be added by modifying the scripts.  Sheets should be created in the format "NoteGame_Player1" and "NoteGame_Player2".  Each sheet should have two columns with headers "key" and "note".  Populate the sheet as desired.  It is recommended to randomize the keys to discourage simple iteration of the notes.
 
-Each sheet should have two columns with headers "key" and "note".  Populate the sheet as desired.  It is recommended to randomize the keys to discourage simple iteration of the notes.
+4. Inside the client_secret.json is a client_email key.  Note the associated email address and share your previously created Google Sheets with that email address.
 
-
-3. Inside the client_secret.json is a client_email key.  Note the associated email address and share your previously created Google Sheets with that email address.
-
-4. Using the instructions in the Zappa README, initialize Zappa and configure it to work with your AWS.  Once initialized, deploy to AWS.
-
+5. Using the instructions in the Zappa README, initialize Zappa and configure it to work with your AWS.  Once initialized, deploy to AWS.
 
 
 ## Usage
