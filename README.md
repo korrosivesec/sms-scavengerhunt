@@ -13,15 +13,15 @@ The lookup script checks queries the associated clue/note from Google Sheets and
 ## Requirements
 
 ### Modules
-*pygsheets - https://github.com/nithinmurali/pygsheets - Google Sheets API module.
-*twilio - https://www.twilio.com/docs/libraries/python - Twilio module.
-*Flask - http://flask.pocoo.org/ - Webhook listener.
-*Zappa - https://github.com/Miserlou/Zappa - Not technically required, but will make deployment a lot easier.
+* pygsheets - https://github.com/nithinmurali/pygsheets - Google Sheets API module.
+* twilio - https://www.twilio.com/docs/libraries/python - Twilio module.
+* Flask - http://flask.pocoo.org/ - Webhook listener.
+* Zappa - https://github.com/Miserlou/Zappa - Not technically required, but will make deployment a lot easier.
 
 ### Accounts/Services
-*Twilio SMS - https://www.twilio.com/sms - These are inexpensive and the Twilio API rocks.
-*Google Account with Sheets access.
-*Amazon AWS account.
+* Twilio SMS - https://www.twilio.com/sms - These are inexpensive and the Twilio API rocks.
+* Google Account with Sheets access.
+* Amazon AWS account.
 
 
 ## Installation
